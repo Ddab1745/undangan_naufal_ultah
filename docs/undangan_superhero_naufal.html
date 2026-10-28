@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Undangan Superhero Naufal - Level 10</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700;900&display=swap');
+:root{--navy:#101b48;--blue:#2764ed;--yellow:#ffd447;--red:#f34b55}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 15%,#385ec0,#142252 65%,#0b1334);font-family:Nunito,Arial,sans-serif;color:white;overflow-x:hidden}
+.sky{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(125deg,transparent 0 75px,#ffffff08 76px 79px,transparent 80px 150px)}
+.city{position:fixed;bottom:0;width:100%;height:100px;opacity:.5;background:linear-gradient(to top,#070e29 0 60%,transparent 60%),repeating-linear-gradient(90deg,#07102b 0 42px,transparent 42px 49px,#07102b 49px 94px,transparent 94px 102px);clip-path:polygon(0 35%,7% 35%,7% 15%,14% 15%,14% 45%,23% 45%,23% 0,31% 0,31% 30%,40% 30%,40% 10%,50% 10%,50% 48%,60% 48%,60% 20%,69% 20%,69% 42%,78% 42%,78% 5%,86% 5%,86% 30%,95% 30%,95% 45%,100% 45%,100% 100%,0 100%)}
+.wrap{position:relative;z-index:1;max-width:520px;margin:35px auto;padding:16px}.card{position:relative;overflow:hidden;border:3px solid var(--yellow);border-radius:28px;background:linear-gradient(155deg,#203c92,#17265d 55%,#111b46);box-shadow:0 20px 65px #0009,0 0 0 7px #ffffff13;text-align:center;padding:32px 22px}
+.badge{display:inline-block;background:var(--yellow);color:var(--navy);padding:8px 20px;border-radius:50px;font-weight:900;letter-spacing:2px;transform:rotate(-0deg)}.hero{font-size:78px;filter:drop-shadow(0 10px 8px #0006);animation:fly 3s ease-in-out infinite;margin:15px 0 0}@keyframes fly{50%{transform:translateY(-13px) rotate(5deg)}}h1{font-family:'Baloo 2',sans-serif;font-size:clamp(32px,8vw,48px);line-height:1.05;margin:5px 0;color:var(--yellow);text-shadow:4px 4px 0 #e63c48,-2px -2px 0 #0b1334}.name{font-family:'Baloo 2';font-size:clamp(26px,7vw,39px);font-weight:800;line-height:1.1;margin:14px 0}.ten{font-size:88px;line-height:1;font-weight:1000;color:var(--yellow);text-shadow:5px 5px 0 var(--red)}p{line-height:1.6}.btn{border:0;background:var(--yellow);color:var(--navy);border-radius:100px;padding:14px 23px;font:900 16px Nunito;cursor:pointer;box-shadow:0 6px 0 #d79520;transition:transform .15s}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #d79520}.details{display:none;animation:pop .5s ease}@keyframes pop{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}.info{background:#ffffff14;border:1px solid #ffffff33;border-radius:15px;padding:13px;margin:11px 0;text-align:left}.info strong{color:var(--yellow)}.count{display:flex;justify-content:center;gap:7px;margin:17px 0}.count div{background:#0c1742;border:1px solid #637dd4;border-radius:12px;padding:9px 7px;min-width:61px}.count b{display:block;color:var(--yellow);font-size:24px}.count small{font-size:10px}.footer{font-size:12px;opacity:.7;margin-top:24px}.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:9;pointer-events:none;animation:fall 3.5s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:0}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sky"></div><div class="city"></div>
+<main class="wrap"><section class="card" aria-label="Undangan ulang tahun Naufal">
+<div class="badge">⚡ UNDANGAN UNTUK KAMU ⚡</div>
+<div class="hero">
+    <img src="_MG_1403.jpg" alt="Naufal"
+         style="width:150px;height:150px;
+         object-fit:cover;border-radius:50%;
+         border:5px solid #ffd447;
+         box-shadow:0 8px 20px #0005;">
+</div>
+<h1>HAPPY<br>BIRTHDAY!</h1>
+<div id="cover"><h3>KE</h3><div class="ten">10</div><div class="name">Naufal Khalik<br>Haedar</div><p>Kamu terpilih menjadi bagian untuk merayakan hari spesialnya!</p><button class="btn" id="open">🛡️ BUKA MISI RAHASIA</button></div>
+<div id="details" class="details">
+<div class="name">Naufal Khalik Haedar</div><p>🎉 Merayakan ulang tahun ke-<strong>10</strong>! 🎉</p>
+<div class="info">📅 <strong>HARI & TANGGAL</strong><br>Jumat, 30 Oktober 2026</div>
+<div class="info">⏰ <strong>WAKTU</strong><br>09.00 WIB</div>
+<div class="info">📍 <strong>LOKASI</strong><br>SD Wawasan Nusantara</div>
+<p><strong>COUNTDOWN TO HERO DAY</strong></p><div class="count" id="count" aria-live="off"><div><b id="d">--</b><small>HARI</small></div><div><b id="h">--</b><small>JAM</small></div><div><b id="m">--</b><small>MENIT</small></div><div><b id="s">--</b><small>DETIK</small></div></div>
+<p id="status">DATENG YAAA!!!💥</p><button class="btn" id="again">🎊 HUJAN CONFETTI!</button>
+</div><div class="footer">POWERED BY FRIENDSHIP • SEE YOUUU... ⭐</div>
+</section></main>
+<script>
+const cover=document.getElementById('cover'),details=document.getElementById('details');
+function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const colors=['#ffd447','#f34b55','#50c9ff','#fff','#9a82ff'];for(let i=0;i<75;i++){const el=document.createElement('span');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=colors[i%colors.length];el.style.animationDelay=Math.random()*1.3+'s';el.style.animationDuration=(2.5+Math.random()*2)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),6000)}}
+document.getElementById('open').addEventListener('click',()=>{cover.style.display='none';details.style.display='block';confetti()});
+document.getElementById('again').addEventListener('click',confetti);
+function countdown(){const remaining=new Date('2026-10-30T09:00:00+07:00').getTime()-Date.now();if(remaining<=0){['d','h','m','s'].forEach(id=>document.getElementById(id).textContent='00');document.getElementById('status').textContent='🎉 HERO DAY TELAH TIBA! SELAMAT ULANG TAHUN, NAUFAL!';return}const vals=[Math.floor(remaining/86400000),Math.floor(remaining/3600000)%24,Math.floor(remaining/60000)%60,Math.floor(remaining/1000)%60];['d','h','m','s'].forEach((id,i)=>document.getElementById(id).textContent=String(vals[i]).padStart(2,'0'))}countdown();setInterval(countdown,1000);
+</script></body></html>
